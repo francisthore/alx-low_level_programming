@@ -11,7 +11,7 @@ int main(void)
 
 	while (i < 10)
 	{
-		putchar((char)digits[i]);
+		putchar(digits[i]);
 		i++;
 	}
 	putchar('\n');

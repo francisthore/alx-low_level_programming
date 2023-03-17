@@ -11,7 +11,8 @@ int main(void)
 
 	while (i < 10)
 	{
-		putchar(digits[i]);
+		printf("%d", digits[i]);
+		i++;
 	}
 	putchar('\n');
 	return (0);

@@ -16,9 +16,9 @@ int main(void)
 	i = 0;
 	while (i < 26)
 	{
-		if (i == 4 || i == 16)
+		if ((i != 16 && i == 4) || (i != 4 && i == 16))
 		{
-			continue;
+			
 		
 		}
 		else

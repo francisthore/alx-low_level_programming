@@ -7,11 +7,11 @@
 int main(void)
 {
 	int i = 0;
-	unsigned char digits[10] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
+	int digits[10] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
 
 	while (i < 10)
 	{
-		putchar(digits[i]);
+		putchar((char)digits[i]);
 		i++;
 	}
 	putchar('\n');

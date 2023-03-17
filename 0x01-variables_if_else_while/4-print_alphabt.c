@@ -19,7 +19,7 @@ int main(void)
 		if ((i != 16 && i == 4) || (i != 4 && i == 16))
 		{
 			/*okay let me try this*/
-		}		
+		}
 		else
 		{
 			putchar(str[i]);

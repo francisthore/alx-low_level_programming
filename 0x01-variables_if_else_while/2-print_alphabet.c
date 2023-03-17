@@ -8,9 +8,9 @@ int main(void)
 {
 	int i;
 	char str[26] = {'a', 'b', 'c', 'd', 'e',	
-		'f', 'g', 'h', 'i', 'j', 'k', 'l',	
-		'm', 'n', 'o', 'p', 'r', 's', 't',	
-		'u', 'v', 'w', 'x', 'y', 'z'};
+	'f', 'g', 'h', 'i', 'j', 'k', 'l',	
+	'm', 'n', 'o', 'p', 'r', 's', 't',	
+	'u', 'v', 'w', 'x', 'y', 'z'};
 	
 	i = 0;
 	while (i < 26)
@@ -19,5 +19,6 @@ int main(void)
 		/*putchar('\n');*/
 		i++;
 	}
+	putchar('\n');
 	return (0);
 }

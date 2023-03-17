@@ -16,16 +16,16 @@ int main(void)
 	i = 0;
 	while (i < 26)
 	{
-		if (str[i] != 'e')
+		if (i == 4 || i == 16)
 		{
-			putchar(str[i]);
+			continue;
+		
 		}
 		else
 		{
-			continue;
+			putchar(str[i]);
 		}
 		i++;
 	}
-	putchar('\n');
 	return (0);
 }

@@ -14,7 +14,7 @@ int main(void)
 	'u', 'v', 'w', 'x', 'y', 'z' };
 
 	i = 25;
-	while (i > 0)
+	while (i > -1)
 	{
 		putchar(str[i]);
 		/*putchar('\n');*/

@@ -1,13 +1,13 @@
 #include <stdlib.h>
 /**
  * _abs - absolute
- *
+ *@num: some number
  * Description: absolute value
  * Return: int
  */
 
-int _abs(int)
+int _abs(int num)
 {
-	abs(int);
+	abs(num);
 	return (0);
 }

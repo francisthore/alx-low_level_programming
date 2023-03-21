@@ -1,11 +1,4 @@
-#include "main.h"
-/**
- * main - entry pt
- *
- * Return:  always 0
- */
-void print_alphabet();
-
+/* A fuction that prints the alphabet when called */
 void print_alphabet(void)
 {
         int i;
@@ -20,11 +13,5 @@ void print_alphabet(void)
                 putchar(alphabet[i]);
                 i++;
         }
-        putchar('\n');
-}
-
-int main(void)
-{
-	print_alphabet();
-	return (0);
+	putchar('\n');
 }

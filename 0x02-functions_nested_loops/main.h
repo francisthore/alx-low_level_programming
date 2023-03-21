@@ -14,7 +14,7 @@ void print_alphabet(void)
 		'l', 'm' , 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v',
 		'w', 'x', 'y', 'z' };
 	i = 0;
-	/* Iterating through the alphabet 
+ 
 	while (i < 26)
 	{
 		putchar(alphabet[i]);

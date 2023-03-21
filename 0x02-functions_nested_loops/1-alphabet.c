@@ -4,7 +4,7 @@
 void print_alphabet(void)
 {
         int i;
-        char alphabet[26] = {
+        char letters[26] = {
                 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k',
                 'l', 'm' , 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v',
                 'w', 'x', 'y', 'z' };
@@ -12,7 +12,7 @@ void print_alphabet(void)
 
         while (i < 26)
         {
-                putchar(alphabet[i]);
+                putchar(letters[i]);
                 i++;
         }
 	putchar('\n');

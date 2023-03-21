@@ -1,3 +1,5 @@
+#include <stdio.h>
+
 /* A fuction that prints the alphabet when called */
 void print_alphabet(void)
 {

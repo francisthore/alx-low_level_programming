@@ -1,4 +1,3 @@
-#include "_putchar.c"
 /**
  * print_sign - prints sign of num
  * @n: an int that is checked sign

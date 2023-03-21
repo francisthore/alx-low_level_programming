@@ -19,7 +19,7 @@ void print_alphabet_x10(void)
 		i = 0;
 		while (i < 26)
 		{
-			putchar(letters[i]);	
+			putchar(letters[i]);
 			i++;
 		}
 		putchar('\n');

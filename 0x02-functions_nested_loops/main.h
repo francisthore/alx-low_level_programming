@@ -6,3 +6,4 @@ int _isalpha(int c);
 int print_sign(int n);
 int _abs(int num);
 int print_last_digit(int num);
+int add(int num1, int num2);

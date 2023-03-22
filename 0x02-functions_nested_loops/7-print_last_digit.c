@@ -8,6 +8,8 @@
  */
 int print_last_digit(int num)
 {
-	int i = num % 10;
+	int i = abs( num % 10);
 	printf("%d%d", i, i);
+	return (i);
+
 }

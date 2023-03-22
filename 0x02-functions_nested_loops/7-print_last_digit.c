@@ -9,7 +9,7 @@
 int print_last_digit(int num)
 {
 	int i = abs( num % 10);
-	printf("%d%d", i, i);
+	putchar('0' + i);
 	return (i);
 
 }

@@ -12,7 +12,6 @@ int main(void)
 
 	i = 0;
 	/**
-	*Ignoring this loop
 	*while (i < 10)
 	*{
 	*	putchar(i);

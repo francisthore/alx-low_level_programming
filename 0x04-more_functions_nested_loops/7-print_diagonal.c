@@ -1,8 +1,8 @@
 #include "main.h"
 /**
- * print_diagonal - prints \
- * @n: integer determining how many times a \ is printed
- * Descriptiom: prints \ n x
+ * print_diagonal - prints
+ * @n: number
+ * Description: prints \ n x
  * Return: void
  */
 void print_diagonal(int n)

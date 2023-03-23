@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 /**
  * more_numbers - prints a number patter 0-14 10x
  * Description: prints 0-14 10x
@@ -15,7 +16,7 @@ void more_numbers(void)
 		j = 0;
 		while (j <= 14)
 		{
-			_putchar('0' + j);
+			printf("%d", j);
 			j++;
 		}
 		_putchar('\n');

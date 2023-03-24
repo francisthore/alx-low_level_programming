@@ -1,9 +1,12 @@
 #include <stdio.h>
+
 /**
- * main - prints fuzz for multiples of 3 and buzz for multiples of 5
- * Return: 0
+ * FizzBuzz - prints Fizz or Buzz
+ * Description: Prints Fizz or Buzz or FizzBuzz
+ * Return: void
  */
-int main(void)
+
+void FizzBuzz(void)
 {
 	int i;
 
@@ -34,7 +37,15 @@ int main(void)
 		i++;
 	}
 	putchar('\n');
-
-	return (0);
 }
 
+/**
+ * main - runs function above
+ * Return: 0
+ */
+
+int main(void)
+{
+	FizzBuzz();
+	return (0);
+}

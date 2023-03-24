@@ -14,7 +14,11 @@ void FizzBuzz(void)
 
 	while (i <= 100)
 	{
-		if (i % 15 == 0)
+		if (i == 100)
+		{
+			printf("Buzz");
+		}
+		else if (i % 15 == 0)
 		{
 			printf("FizzBuzz");
 			putchar(' ');

@@ -23,12 +23,12 @@ int main(void)
 		}
 		else if (i % 5 == 0)
 		{
-			printf("Buzz ");
+			printf("Buzz");
 			putchar(' ');
 		}
 		else
 		{
-			printf("%d ", i);
+			printf("%d", i);
 			putchar(' ');
 		}
 		i++;

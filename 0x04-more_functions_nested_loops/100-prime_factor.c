@@ -7,9 +7,9 @@
 
 int main(void)
 {
-	int i, j, k, num, factor;
+	int i, j, k, num;
 
-	i = 1;
+	i = 2;
 	k = 1;
 	num = 1231952;
 
@@ -17,13 +17,11 @@ int main(void)
 	{
 		if (num % i == 0)
 		{
-			factor = i;
+			printf("%d is a factor of %d\n", i, num);
 
-			printf("%d is a factor of %d\n", factor, num);
-
-			for (j = 2; j < factor; j++)
+			for (j = 2; j < i; j++)
 			{
-				if (factor % j == 0)
+				if (i % j == 0)
 				{
 					k = 0;
 				}
@@ -31,7 +29,7 @@ int main(void)
 
 			if (k == 1)
 			{
-				printf("%d is a prime factor.\n", factor);
+				printf("%d is a prime factor.\n", i);
 			}
 
 		}

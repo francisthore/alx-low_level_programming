@@ -1,9 +1,11 @@
 #include "main.h"
 
 /**
- *reset_to98 - resets var to 98
+ *reset_to_98 - resets var to 98
  *@n: pointer
- *Description: takes a pointer of a var and resets it to 98
+ *Description: takes an address and resets the value to 98
+ *you know the bies
+ *
  *Return: void
  */
 void reset_to_98(int *n)

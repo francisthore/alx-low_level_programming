@@ -10,12 +10,13 @@
 void puts2(char *str)
 {
 	int i, MAX;
+	char s[];
 
 	MAX = strlen(str);
 
 	for (i = 0; i <= MAX; i += 2)
 	{
-		_putchar(str[i]);
+		s[i/2] = str[i];
 	}
-
+	puts(s);
 }

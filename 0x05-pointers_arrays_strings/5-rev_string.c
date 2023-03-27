@@ -9,22 +9,14 @@
 
 void rev_string(char *s)
 {
-	char *str;
 	int i, j, MAX;
 
-	str = s;
+	MAX = strlen(s);
 
-	MAX = strlen(str);
-
-	i = 0;
-	j = 1;
-
-	while (i < MAX)
+	for (i = 0; i < MAX / 2; i++)
 	{
-		putchar(str[MAX - j]);
-		i++;
-		j++;
+		j = s[i];
+		s[i] = s[MAX - i - 1];
+		s[MAX - i - 1] = j;
 	}
-	putchar('\n');
-
 }

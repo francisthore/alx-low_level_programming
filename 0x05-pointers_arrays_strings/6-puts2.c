@@ -10,7 +10,7 @@
 void puts2(char *str)
 {
 	int i, MAX;
-	char s[];
+	char *s;
 
 	MAX = strlen(str);
 

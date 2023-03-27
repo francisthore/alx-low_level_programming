@@ -11,13 +11,12 @@
 void puts2(char *str)
 {
 	int i, MAX;
-	char s[] = "";
 
 	MAX = strlen(str);
 
-	for (i = 0; i <= MAX; i += 2)
+	for (i = 0; i < MAX; i += 2)
 	{
-		s[i / 2] = str[i];
+		_putchar(str[i]);
 	}
-	printf("%s\n", s);
+	_putchar('\n');
 }

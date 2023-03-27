@@ -1,5 +1,6 @@
 #include "main.h"
 #include <string.h>
+#include <stdio.h>
 
 /**
  * puts2 - prints evry other character
@@ -10,7 +11,7 @@
 void puts2(char *str)
 {
 	int i, MAX;
-	char *s;
+	char s[] = "";
 
 	MAX = strlen(str);
 

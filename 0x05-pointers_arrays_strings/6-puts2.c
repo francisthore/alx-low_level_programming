@@ -17,8 +17,7 @@ void puts2(char *str)
 	for (i = 0; i <= MAX; i++)
 	{
 		_putchar(str[j]);
-		if (j != MAX)
-			j += 2;
+		j += 2;
 	}
 	_putchar('\n');
 }

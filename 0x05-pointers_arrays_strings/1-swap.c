@@ -14,7 +14,7 @@ void swap_int(int *a, int *b)
 	tmp2 = *b;
 
 	*tmp = *a; /* now the tmp pointer has the address of a */
-	
+
 	*b = *tmp; /* now b = a */
 	*a = tmp2;
 }

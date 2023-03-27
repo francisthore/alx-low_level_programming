@@ -11,7 +11,7 @@ void puts2(char *str)
 {
 	int i, MAX;
 
-	MAX = strlen(str);	
+	MAX = strlen(str);
 
 	for (i = 0; i <= MAX; i += 2)
 	{

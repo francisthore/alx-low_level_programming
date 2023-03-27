@@ -17,7 +17,7 @@ void puts2(char *str)
 
 	for (i = 0; i <= MAX; i += 2)
 	{
-		s[i/2] = str[i];
+		s[i / 2] = str[i];
 	}
-	puts(s);
+	printf("%s\n", s);
 }

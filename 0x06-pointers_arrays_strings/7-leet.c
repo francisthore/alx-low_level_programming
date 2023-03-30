@@ -7,7 +7,7 @@
 char *leet(char *str)
 {
 	int i, j, k;
-	char rep[15] = {'a', 'A', 'e', 'E', 'o', 'O', 't', 'T', 'l', 'L'};
+	char rep[10] = {'a', 'A', 'e', 'E', 'o', 'O', 't', 'T', 'l', 'L'};
 	char num[10] = {'4', '4', '3', '3', '0', '0', '7', '7', '1', '1'};
 
 	i = 0;
@@ -16,7 +16,7 @@ char *leet(char *str)
 
 	while (str[i])
 	{
-		if(str[i] == rep[j])
+		if (str[i] == rep[j])
 			str[i] = num[k];
 
 		j++;

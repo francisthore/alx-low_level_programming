@@ -1,4 +1,4 @@
-#include <strig.h>
+#include <string.h>
 
 /**
  * _strstr - locates substring
@@ -9,7 +9,7 @@
 
 char *_strstr(char *haystack, char *needle)
 {
-	char *prt = strstr(haystack, needle);
+	char *ptr = strstr(haystack, needle);
 
 	return (ptr);
 }

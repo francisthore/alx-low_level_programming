@@ -1,0 +1,17 @@
+#include <math.h>
+
+/**
+ * _pow_recursion - returns x raised to y
+ * @x: base
+ * @y: power
+ * Return: power
+ */
+
+int _pow_recursion(int x, int y)
+{
+	if (y < 0)
+	{
+		return (-1);
+	}
+	return (pow(x, y));
+}

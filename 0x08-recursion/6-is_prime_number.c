@@ -1,3 +1,5 @@
+int is_prime(int n, int i);
+
 /**
  * is_prime_number - checks if a number is prime
  * @n: number to be checked
@@ -6,16 +8,22 @@
 
 int is_prime_number(int n)
 {
-	int i, k;
+	return (is_prime(n, 2));
+}
 
-	k = 1;
+/**
+ * is_prime - returns 1 if a number is prime
+ * @n: number to be checked
+ * @i: recursion looper
+ * Return: 1 if number is prime, else 0
+ */
 
+int is_prime(int n, int i)
+{
 	if (n <= 1)
 		return (0);
-	for (i = 2; i < n; i++)
-	{
-		if (n % i == 0)
-			k = 0;
-	}
-	return (k);
+	if (n % i == 0)
+		return (0);
+	is_prime(n, i + 1);
+	return (1);
 }

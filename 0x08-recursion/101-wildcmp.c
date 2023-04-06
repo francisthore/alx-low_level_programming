@@ -17,9 +17,10 @@ int wildcmp(char *s1, char *s2)
 /**
  * cmp - compares two strings
  * @s1: first string
- * @s2, second string
+ * @s2: second string
  * @i: recursion looper (s1 index)
  * @j: recursion looper (s2 index)
+ * Return: 1 or 0
  */
 
 int cmp(char *s1, char *s2, int i, int j)

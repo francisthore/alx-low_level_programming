@@ -6,7 +6,8 @@
  *@s: string to be reversed
  *Return: void
  */
-int i = 1;
+
+int i = 0;
 
 void _print_rev_recursion(char *s)
 {

@@ -1,6 +1,6 @@
 #include <string.h>
 
-int palindrome(char *s, int len, int i);
+int palindrome(char *s, int i);
 
 /**
  * is_palindrome - checks if a string is palindrome
@@ -10,25 +10,22 @@ int palindrome(char *s, int len, int i);
 
 int is_palindrome(char *s)
 {
-	int len = strlen(s);
-
-	return (palindrome(s, len, 0));
+	return (palindrome(s, 1));
 }
 
 /**
  * palindrome - checks if a string is palindrome
  * @s: string to be checked
- * @len: length of the string
  * @i: recursion looper
  * Return: 1 if palindrome, else 0
  */
 
-int palindrome(char *s, int len, int i)
+int palindrome(char *s, int i)
 {
-	if (len == 0)
+	if (strlen(s) == 0)
 		return (1);
-	if (s[i] != s[len - i - 1])
+	if (s[0] != s[strlen(s) - i])
 		return (0);
-	palindrome(s, len, i + 1);
+	palindrome(s + 1, i + 1);
 	return (1);
 }

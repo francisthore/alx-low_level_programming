@@ -1,9 +1,10 @@
+int sqrt_wrap(int, int);
+
 /**
- * _sqrt_recursion - calculates square root of a number
+ * _sqrt_recursion - returns square root of a number
  * @n: number whose square root we are calculating
  * Return: the square root
  */
-int sqrt_wrap(int n, int i);
 
 int _sqrt_recursion(int n)
 {
@@ -13,7 +14,7 @@ int _sqrt_recursion(int n)
 /**
  * sqrt_wrap - calculates the sqaureroot of a number
  * @n: number whose square root we are looking for
- * @i: a number to iterate recursiveley with
+ * @i: recursion looper
  * Return: square root
  */
 

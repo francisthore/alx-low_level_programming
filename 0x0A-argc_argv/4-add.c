@@ -15,8 +15,8 @@ int main(int argc, char *argv[])
 
 	if (argc == 0)
 	{
-		printf("0\n");
-		exit(0);
+		printf("%d\n", 0);
+		return (0);
 	}
 	else
 	{

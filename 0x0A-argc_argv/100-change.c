@@ -43,7 +43,7 @@ int main(int argc, char *argv[])
 		coins += m5;
 	if (m5r > 0)
 		coins += m2;
-	if (m2r > 1)
+	if (m2r > 0)
 		coins += m1;
 
 	printf("%d\n", coins);

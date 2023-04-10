@@ -16,6 +16,11 @@ int main(int argc, char *argv[])
 		return (1);
 	}
 
+	if (*arg[1] < 0)
+	{
+		printf("0\n");
+	}
+
 	printf("Money/25: %d\n", atoi(argv[1]) / 25);
 	printf("Money/25: %d\n", atoi(argv[1]) % 25);
 

@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include <stdlib.h>
 #include <stddef.h>
 
@@ -21,6 +22,9 @@ char *argstostr(int ac, char **av)
 	if (str == NULL)
 		return (NULL);
 	for (i = 0; i < ac; i++)
+	{
 		str[i] = 'h';
+		printf("%s\n", av[i]);
+	}
 	return (str);
 }

@@ -12,16 +12,16 @@
 char *_strdup(char *str)
 {
 	char *strdup;
-	int i;
+	unsigned long int i;
 
 	if (str == NULL)
 		return (NULL);
 
-	strdup = malloc((sizeof(str) * strlen(str)) - 83);
+	strdup = malloc(sizeof(str) * strlen(str));
 
 	if (strdup == NULL)
 		return (NULL);
-	for (i = 0; i < (int) (sizeof(str) * strlen(str)); i++)
+	for (i = 0; i < (sizeof(str) * strlen(str)); i++)
 		strdup[i] = str[i];
 	return (strdup);
 }

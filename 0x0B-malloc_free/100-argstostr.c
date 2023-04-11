@@ -21,6 +21,6 @@ char *argstostr(int ac, char **av)
 	if (str == NULL)
 		return (NULL);
 	for (i = 0; i < ac; i++)
-		str[i] = (char) av[i];
+		str[i] = 'h';
 	return (str);
 }

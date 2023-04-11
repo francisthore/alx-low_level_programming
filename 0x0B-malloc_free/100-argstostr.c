@@ -23,8 +23,8 @@ char *argstostr(int ac, char **av)
 		return (NULL);
 	for (i = 0; i < ac; i++)
 	{
-		str[i] = 'h';
 		printf("%s\n", av[i]);
 	}
+	str = "";
 	return (str);
 }

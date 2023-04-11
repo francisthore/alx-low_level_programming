@@ -1,6 +1,7 @@
 #include "main.h"
 #include <stdlib.h>
 #include <stddef.h>
+#include <string.h>
 
 /**
  * _strdup - allocates a memory block that has a string copy
@@ -16,11 +17,11 @@ char *_strdup(char *str)
 	if (str == NULL)
 		return (NULL);
 
-	strdup = malloc(sizeof(str));
+	strdup = malloc(sizeof(str) * strlen(str));
 
 	if (strdup == NULL)
 		return (NULL);
-	for (i = 0; i < sizeof(str); i++)
+	for (i = 0; i < sizeof(str) * strlen(str); i++)
 		strdup[i] = str[i];
 	return (strdup);
 }

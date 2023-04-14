@@ -3,6 +3,7 @@
 
 /**
  * _realloc - allocates additional memory to a pointer
+ * @ptr: pointer with old address
  * @old_size: old memor size
  * @new_size: new memory size
  * Return: pointer to new mem

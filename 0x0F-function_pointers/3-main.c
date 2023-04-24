@@ -15,7 +15,6 @@ int main(int argc, char *argv[])
 {
 	int (*operation)(int, int);
 	int ans;
-	char *o = argv[2];
 
 	if (argc != 4)
 	{

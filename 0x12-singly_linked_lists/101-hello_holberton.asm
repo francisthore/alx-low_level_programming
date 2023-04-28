@@ -1,5 +1,5 @@
 section .data
-    msg db "Hello, Holberton!",10      ; Prints the message Hello Holberton (LF)
+    msg db "Hello, Holberton",10      ; Prints the message Hello Holberton (LF)
 
 section .text
     global _start

@@ -44,12 +44,13 @@ void print_float(va_list args)
 
 void print_string(va_list args)
 {
-	if (va_arg(args, char *) == NULL)
+	char *str = va_arg(args, char *);
+
+	if (!str)
 	{
-		printf("%s", "(nil)");
-		return;
+		str = "(nil)";
 	}
-	printf("%s", va_arg(args, char *));
+	printf("%s", str);
 }
 
 /**
@@ -61,8 +62,9 @@ void print_string(va_list args)
 
 void print_all(const char * const format, ...)
 {
-	int i;
+	int i, j;
 	va_list args;
+	char *seperator = "";
 
 	fmt types[] = {
 	{"c", print_char},
@@ -73,13 +75,25 @@ void print_all(const char * const format, ...)
 
 	va_start(args, format);
 	i = 0;
-
+	(void)types;
 	while (format[i] != '\0')
 	{
-		if (format[i] == *types[i].tp)
-			types[i].f(args);
+		j = 0;
+
+		while (j < 4)
+		{
+			if (format[i] == *types[j].tp)
+			{
+				printf("%s", seperator);
+				types[j].f(args);
+				seperator = ", ";
+				break;
+			}
+			j++;
+		}
 		i++;
 	}
+
 	va_end(args);
 	putchar('\n');
 }

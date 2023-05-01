@@ -17,6 +17,8 @@ dog_t *new_dog(char *name, float age, char *owner)
 	dog = malloc(sizeof(dog_t));
 	if (!dog)
 	{
+		free(dog->name);
+		free(dog->owner);
 		free(dog);
 		return (NULL);
 	}

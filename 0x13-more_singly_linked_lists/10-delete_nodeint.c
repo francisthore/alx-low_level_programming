@@ -39,7 +39,6 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 		i++;
 	}
 	tmp->next = tmp->next->next;
-	tmp = tmp->next;
 	/* free(tmp); */
 	return (1);
 }

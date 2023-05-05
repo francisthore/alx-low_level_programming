@@ -18,5 +18,19 @@ void print_binary(unsigned long int n)
 		n = n >> 1;
 		weight *= 10;
 	}
-	printf("%lu", converted);
+	print_long_int(converted);
+	/* _putchar('\n'); */
+}
+
+/**
+ * print_long_int - prints a long int
+ * @n: long int
+ * Return: void
+ */
+
+void print_long_int(unsigned long int n)
+{
+	if (n / 10)
+		print_long_int(n / 10);
+	_putchar(n % 10 + '0');
 }

@@ -8,14 +8,22 @@
 
 void print_binary(unsigned long int n)
 {
-	unsigned long int converted = 0, weight = 1, rem;
+	unsigned long int converted;
+	int i, j = 0;
 
-	while (n != 0)
+	i = 63;
+	while (i >= 0)
 	{
-		rem = n & 1;
-		converted = converted + rem * weight;
-		n = n >> 1;
-		weight *= 10;
+		converted = n >> i;
+		if (converted & 1)
+		{
+			_putchar('1');
+			j++;
+		}
+		else if (j)
+			_putchar('0');
+		i--;
 	}
-	_putchar('H');
+	if (!j)
+		_putchar('0');
 }

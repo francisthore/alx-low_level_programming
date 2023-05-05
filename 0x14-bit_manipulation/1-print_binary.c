@@ -17,5 +17,5 @@ void print_binary(unsigned long int n)
 		n = n >> 1;
 		weight *= 10;
 	}
-	printf("%lu", converted);
+	_putchar('H');
 }

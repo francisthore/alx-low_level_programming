@@ -4,4 +4,6 @@
 #include <stdio.h>
 
 unsigned int binary_to_uint(const char *b);
+void print_binary(unsigned long int n);
+int _putchar(int ch);
 #endif /* MAIN_H  */

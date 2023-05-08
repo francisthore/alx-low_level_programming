@@ -21,15 +21,20 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	{
 		buffer = malloc(sizeof(char) * letters);
 		if (buffer == NULL)
-			return (0); 
+			return (0);
 		num_letters = read(fd, buffer, letters);
 		if (num_letters > -1)
 		{
 			buffer[num_letters] = '\0';
 			wr = write(1, buffer, num_letters);
-			(void)wr;
-			/* if (wr > -1) */
-			return (num_letters);
+			if (wr > -1)
+			{
+				free(buffer);
+				close(fd);
+				return (num_letters);
+			}
+			else
+				return (0);
 		}
 		else
 			return (0);

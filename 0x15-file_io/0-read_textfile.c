@@ -27,6 +27,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		{
 			buffer[num_letters] = '\0';
 			wr = write(1, buffer, num_letters);
+			(void)wr;
 			/* if (wr > -1) */
 			return (num_letters);
 		}

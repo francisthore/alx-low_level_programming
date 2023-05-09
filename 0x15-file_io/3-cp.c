@@ -22,12 +22,14 @@ int main(int argc, char **argv)
 	{	file2 = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
 		fr = read(file1, buffer, 1024);
 		if (fr == -1)
-		{	dprintf(2, "Error: Can't read from file %s\n", argv[1]);
+		{	close(file1);
+			dprintf(2, "Error: Can't read from file %s\n", argv[1]);
 			exit(98);
 		}
 		fw = write(file2, buffer, fr);
 		if (fw == -1)
-		{	dprintf(2, "Error: Can't write to %s\n", argv[2]);
+		{	close(file2);
+			dprintf(2, "Error: Can't write to %s\n", argv[2]);
 			exit(99);
 		}
 		cls = close(file1);

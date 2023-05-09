@@ -2,113 +2,54 @@
 #include <unistd.h>
 #include <stdlib.h>
 #include <stdio.h>
-#include <string.h>
-
-void copy_file(char *file1, char *file2);
-void create_file(const char *filename, char *text_content);
-
 /**
- * create_file - creates a file
- * @filename: name of file
- * @text_content: what to write into the file
- * Return: 1 or -1
-*/
-
-void create_file(const char *filename, char *text_content)
-{
-	int fd, cls;
-
-	if (!filename)
-		return;
-	fd = creat(filename, 00664);
-	if (fd > -1)
-	{
-		fd = open(filename, O_WRONLY | O_TRUNC);
-		if (fd > -1)
-		{
-			if (text_content != NULL)
-			{
-				write(fd, text_content, strlen(text_content));
-				free(text_content);
-			}
-			cls = close(fd);
-			if (cls == -1)
-			{
-				write(2, "Error: Can't close fd ", 22);
-				write(2, "\n", 1);
-				exit(100);
-			}
-			return;
-		}
-		else
-			return;
-	}
-	else
-	{
-		write(2, "Error: Can't write from file ", 29);
-		write(2, filename, strlen(filename));
-		write(2, "\n", 1);
-		exit(99);
-	}
-}
-
-/**
- * copy_file - copies file contents to another file
- * @file1: file from
- * @file2: file to
- * Return: 1 on success or -1 on failure
-*/
-
-void copy_file(char *file1, char *file2)
-{
-	int fd1, fd2, sz1, cls;
-	char *buffer;
-
-	fd1 = open(file1, O_RDONLY);
-	if (fd1 > -1)
-	{
-		sz1 = lseek(fd1, 0, SEEK_END);
-		buffer = malloc(sizeof(char) * sz1);
-		if (buffer != NULL)
-		{
-			lseek(fd1, 0, SEEK_SET);
-			fd2 = read(fd1, buffer, sz1);
-			cls = close(fd1);
-			if (cls == -1)
-			{
-				write(2, "Error: Can't close fd ", 22);
-				write(2, "\n", 1);
-				exit(100);
-			}
-			create_file(file2, buffer);
-		}
-		else
-			return;
-
-	}
-	else
-	{
-		write(2, "Error: Can't read from file ", 28);
-		write(2, file1, strlen(file1));
-		write(2, "\n", 1);
-		exit(98);
-	}
-
-}
-/**
- * main - tests some code
+ * main - copies files
  * @argc: number of args
  * @argv: file names
  * Return: void
 */
-
 int main(int argc, char **argv)
 {
+	char buffer[1024];
+	int file1, file2, fw, fr, cls;
+
 	if (argc != 3)
 	{
-		write(2, "Usage: cp file_from file_to\n", 28);
+		dprintf(2, "Usage: cp file_from file_to\n");
 		exit(97);
 	}
-	copy_file(argv[1], argv[2]);
+	file1 = open(argv[1], O_RDONLY);
+	if (file1 > -1)
+	{
+		file2 = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
+		fr = read(file1, buffer, 1024);
+		if (fr == -1)
+		{
+			dprintf(2, "Error: Can't read from file %s\n", argv[1]);
+			exit(98);
+		}
+		fw = write(file2, buffer, fr);
+		if (fw == -1)
+		{
+			dprintf(2, "Error: Can't write to %s\n", argv[2]);
+			exit(99);
+		}
+		cls = close(file1);
+		if (cls == -1)
+		{
+			dprintf(2, "Error: Can't close fd %d\n", file1);
+			exit(100);
+		}
+		cls = close(file2);
+		if (cls == -1)
+		{
+			dprintf(2, "Error: Can't close fd %d\n", file2);
+			exit(100);
+		}
+	} else
+	{
+		dprintf(2, "Error: Can't read from file %s\n", argv[1]);
+		exit(98);
+	}
 	return (0);
 }

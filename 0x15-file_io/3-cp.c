@@ -4,7 +4,7 @@
 #include <stdio.h>
 #include <string.h>
 
-int copy_file(char *file1, char *file2);
+void copy_file(char *file1, char *file2);
 int create_file(const char *filename, char *text_content);
 
 /**
@@ -58,7 +58,7 @@ int create_file(const char *filename, char *text_content)
  * Return: 1 on success or -1 on failure
 */
 
-int copy_file(char *file1, char *file2)
+void copy_file(char *file1, char *file2)
 {
 	int fd1, fd2, sz1, cls;
 	char *buffer;
@@ -74,7 +74,7 @@ int copy_file(char *file1, char *file2)
 			lseek(fd1, 0, SEEK_SET);
 			fd2 = read(fd1, buffer, sz1);
 			printf("Read these many bytes: [%d]\n", fd2);
-			close(fd1);
+			cls = close(fd1);
 			if (cls == -1)
 			{
 				write(2, "Error: Can't close fd ", 22);
@@ -84,7 +84,7 @@ int copy_file(char *file1, char *file2)
 			create_file(file2, buffer);
 		}
 		else
-			return (-1);
+			return;
 
 	}
 	else

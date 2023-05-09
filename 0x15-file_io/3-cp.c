@@ -25,9 +25,7 @@ int main(int argc, char **argv)
 	}
 	file2 = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
 	fr = read(file1, buffer, 1024);
-	printf("Read --> %d bytes\n", fr);
 	fw = write(file2, buffer, fr);
-	printf("Writtem --> %d bytes\n", fw);
 	if (fr == -1)
 	{	close(file1);
 		dprintf(2, "Error: Can't read from file %s\n", argv[1]);

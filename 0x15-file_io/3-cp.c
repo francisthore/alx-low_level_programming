@@ -5,7 +5,7 @@
 #include <string.h>
 
 void copy_file(char *file1, char *file2);
-int create_file(const char *filename, char *text_content);
+void create_file(const char *filename, char *text_content);
 
 /**
  * create_file - creates a file
@@ -14,12 +14,12 @@ int create_file(const char *filename, char *text_content);
  * Return: 1 or -1
 */
 
-int create_file(const char *filename, char *text_content)
+void create_file(const char *filename, char *text_content)
 {
 	int fd, cls;
 
 	if (!filename)
-		return (-1);
+		return;
 	fd = creat(filename, 00664);
 	if (fd > -1)
 	{
@@ -29,6 +29,7 @@ int create_file(const char *filename, char *text_content)
 			if (text_content != NULL)
 			{
 				write(fd, text_content, strlen(text_content));
+				free(text_content);
 			}
 			cls = close(fd);
 			if (cls == -1)
@@ -82,7 +83,6 @@ void copy_file(char *file1, char *file2)
 				exit(100);
 			}
 			create_file(file2, buffer);
-			free(buffer);
 		}
 		else
 			return;

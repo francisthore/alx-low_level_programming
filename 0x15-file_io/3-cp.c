@@ -82,6 +82,7 @@ void copy_file(char *file1, char *file2)
 				exit(100);
 			}
 			create_file(file2, buffer);
+			free(buffer);
 		}
 		else
 			return;

@@ -38,10 +38,10 @@ void create_file(const char *filename, char *text_content)
 				write(2, "\n", 1);
 				exit(100);
 			}
-			return (1);
+			return;
 		}
 		else
-			return (-1);
+			return;
 	}
 	else
 	{

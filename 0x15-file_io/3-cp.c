@@ -68,13 +68,11 @@ void copy_file(char *file1, char *file2)
 	if (fd1 > -1)
 	{
 		sz1 = lseek(fd1, 0, SEEK_END);
-		printf("The size of %s is --> %d <<\n", file1, sz1);
 		buffer = malloc(sizeof(char) * sz1);
 		if (buffer != NULL)
 		{
 			lseek(fd1, 0, SEEK_SET);
 			fd2 = read(fd1, buffer, sz1);
-			printf("Read these many bytes: [%d]\n", fd2);
 			cls = close(fd1);
 			if (cls == -1)
 			{

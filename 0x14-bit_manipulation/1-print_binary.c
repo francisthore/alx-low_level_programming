@@ -9,16 +9,24 @@
 void print_binary(unsigned long int n)
 {
 	unsigned long int dec_var;
-	int i;
+	int i, counter;
 
-	i = 64;
+	i = 63;
+	counter = 0;
 	while (i >= 0)
 	{
 		dec_var = n >> i;
 		if (dec_var & 1)
+		{
 			_putchar('1');
-		else
+			counter++;
+		}
+		else if(counter)
 			_putchar('0');
 		i--;
+	}
+	if (!counter)
+	{
+		_putchar('0');
 	}
 }

@@ -8,18 +8,18 @@
 
 unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
-	unsigned long int num1, num2;
-	int i, counter;
+	unsigned long int first_num, second_num;
+	int i, ctr;
 
-	num1 = n ^ m;
-	counter = 0;
+	first_num = n ^ m;
+	ctr = 0;
 	i = 63;
 	while (i >= 0)
 	{
-		num2 = num1 >> i;
-		if (num2 & 1)
-			counter += 1;
+		second_num = first_num >> i;
+		if (second_num & 1)
+			ctr += 1;
 		i--;
 	}
-	return (counter);
+	return (ctr);
 }

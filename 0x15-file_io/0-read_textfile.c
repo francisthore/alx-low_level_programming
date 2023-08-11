@@ -42,7 +42,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		return (0);
 	}
 	letters_printed = write(1, buff, letters_read);
-	if (letters_printed == -1 || letters_printed != letters)
+	if (letters_printed == -1 || letters_printed != letters_read)
 	{
 		free(buff);
 		return (0);

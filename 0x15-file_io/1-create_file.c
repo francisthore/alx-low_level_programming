@@ -22,6 +22,10 @@ int create_file(const char *filename, char *text_content)
 	for (i = 0; text_content[i] != '\0'; i++)
 		len++;
 	if (write(fd, text_content, len) == -1)
+	{
+		close(fd);
 		return (-1);
+	}
+	close(fd);
 	return (1);
 }

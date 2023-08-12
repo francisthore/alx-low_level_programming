@@ -3,6 +3,22 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+void read_err(int fd, char *filename);
+
+/**
+ * read_err - checks read error
+ * @fd: fd
+ * @filename: name of the file
+ * Return: void
+*/
+void read_err(int fd, char *filename)
+{
+	if (fd < 0)
+	{
+		dprintf(2, "Error: Can't read from file %s\n", filename);
+		exit(98);
+	}
+}
 
 /**
  * main - copies file to file2
@@ -54,3 +70,5 @@ int main(int ac, char **av)
 	}
 	return (0);
 }
+
+

@@ -44,10 +44,13 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	if (idx == dlistint_len(*h) - 1)
 		return (add_dnodeint_end(h, n));
 	tmp = *h;
-	while (idx != 1)
+	if (idx != 1)
 	{
-		tmp = tmp->next;
-		idx--;
+		while (idx != 1)
+		{
+			tmp = tmp->next;
+			idx--;
+		}
 	}
 	new_node = malloc(sizeof(dlistint_t));
 	if (!new_node)

@@ -3,4 +3,4 @@
 # make -f filename # call nake with the filename
 
 all:
-	gcc -Wall -pedantic -Werror -Wextra -std=gnu89 *.c -o school
+	gcc -Wall -pedantic -Werror -Wextra -std=gnu89 main.c school.c -o school

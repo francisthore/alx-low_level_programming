@@ -1,0 +1,6 @@
+# My Makefile for some automation
+# Usage
+# make -f filename # call nake with the filename
+
+all:
+	gcc *.c -o school

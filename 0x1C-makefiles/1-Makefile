@@ -1,0 +1,9 @@
+# Makefile using variables
+# usage
+# make -f filename # call make with the filename
+
+CC := gcc
+SRC := $(wildcard *.c)
+
+all:
+	${CC} -Wall -pedantic -Werror -Wextra -std=gnu89 ${SRC} -o school

@@ -2,8 +2,9 @@
 # usage
 # make -f filename # call make with the filename
 
-CC := gcc
-SRC := $(wildcard *.c)
+CC = gcc
+
+SRC := main.c school.c
 
 all:
 	${CC} -Wall -pedantic -Werror -Wextra -std=gnu89 ${SRC} -o school
